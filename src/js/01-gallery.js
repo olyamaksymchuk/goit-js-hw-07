@@ -26,12 +26,12 @@ galleryContainer.addEventListener('click', onLargeImage);
 
 function onLargeImage(evt) {
     evt.preventDefault();
-    if (!evt.target.classList.contains("gallery-image")) {
+    if (!evt.target.classList.contains("gallery__image")) {
         return;
 }
 
 const instance = basicLightbox.create(
-    `<img src="${evt.target.dataset.source}" width="800" heigth="600"/>`, {
+    `<img src="${evt.target.dataset.source}" width="800" height="600"/>`, {
     onShow: () => document.addEventListener('keydown', onCloseModal),
     onClose: () => document.addEventListener('keydown', onCloseModal),
 });
